@@ -3,15 +3,15 @@
   "version": "0.0.1",
   "description": "Easy build react library",
   "bin": {
-    "build-library": "./dist/index.js"
+    "build-library": "./bin/build-library.js"
   },
   "scripts": {
     "start": "babel-node src/index.js",
     "build": "babel ./src --out-dir dist"
   },
   "files": [
-    "dist",
-    "src",
+    "bin",
+    "dist"
     "babel.library.js"
   ],
   "dependencies": {
