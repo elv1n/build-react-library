@@ -4,6 +4,7 @@ import fse from 'fs-extra';
 import glob from 'glob';
 
 import paths from 'paths';
+import args from 'args';
 
 async function includeFileInBuild(file) {
   const sourcePath = path.resolve(paths.lib, file);
@@ -77,6 +78,7 @@ async function createPackageFile() {
   } = JSON.parse(packageData);
   const newPackageData = {
     ...packageDataOther,
+    name: args.libName ? args.libName : packageDataOther.name,
     private: false,
     main: './index.js',
     module: './esm/index.js',
