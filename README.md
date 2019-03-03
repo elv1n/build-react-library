@@ -3,7 +3,7 @@
 
 ## build-react-library helps you to bundle a React library
 
-**build-react-library based on configuration of [@material-ui](https://github.com/mui-org/material-ui) babel config**
+**build-react-library based on [@material-ui](https://github.com/mui-org/material-ui) babel config**
 
 ### Get Started
 
