@@ -10,9 +10,11 @@ if (process.env.BABEL_ENV === 'es') {
     [
       '@babel/preset-env',
       {
-        modules: ['esm', 'production-umd'].includes(process.env.BABEL_ENV) ? false : 'commonjs',
-      },
-    ],
+        modules: ['esm', 'production-umd'].includes(process.env.BABEL_ENV)
+          ? false
+          : 'commonjs'
+      }
+    ]
   ];
 }
 
@@ -23,9 +25,9 @@ const productionPlugins = [
   [
     'transform-react-remove-prop-types',
     {
-      mode: 'unsafe-wrap',
-    },
-  ],
+      mode: 'unsafe-wrap'
+    }
+  ]
 ];
 
 module.exports = {
@@ -34,32 +36,30 @@ module.exports = {
     ['@babel/plugin-proposal-class-properties', { loose: true }],
     ['@babel/plugin-proposal-object-rest-spread', { loose: true }],
     '@babel/plugin-transform-object-assign',
-    '@babel/plugin-transform-runtime',
+    '@babel/plugin-transform-runtime'
   ],
   ignore: [/@babel[\\|/]runtime/],
   env: {
     cjs: {
-      plugins: productionPlugins,
+      plugins: productionPlugins
     },
     coverage: {
-      plugins: [
-        'babel-plugin-istanbul'
-      ],
+      plugins: ['babel-plugin-istanbul']
     },
     esm: {
-      plugins: productionPlugins,
+      plugins: productionPlugins
     },
     es: {
-      plugins: productionPlugins,
+      plugins: productionPlugins
     },
     production: {
-      plugins: productionPlugins,
+      plugins: productionPlugins
     },
     'production-umd': {
-      plugins: productionPlugins,
+      plugins: productionPlugins
     },
     test: {
       sourceMaps: 'both'
-    },
-  },
+    }
+  }
 };

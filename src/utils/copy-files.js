@@ -64,6 +64,8 @@ async function typescriptCopy({ from, to }) {
   return Promise.all(cmds);
 }
 
+const isDTsExist = () => fse.exists(path.join(paths.src, 'index.d.ts'));
+
 async function createPackageFile() {
   const packageData = await fse.readFile(
     path.resolve(paths.lib, './package.json'),
@@ -82,7 +84,7 @@ async function createPackageFile() {
     private: false,
     main: './index.js',
     module: './esm/index.js',
-    typings: './index.d.ts'
+    typings: (await isDTsExist()) ? './index.d.ts' : undefined
   };
   const targetPath = path.resolve(paths.build, './package.json');
 

@@ -1,17 +1,17 @@
 import yargs from 'yargs';
 
 const { argv } = yargs.options({
-  src: {
+  'src-dir': {
     alias: 's',
     describe: 'Library source folder',
     default: 'src'
   },
-  out: {
+  'output-dir': {
     alias: 'o',
     describe: 'Compiled source folder',
     default: 'build'
   },
-  libName: {
+  'lib-name': {
     alias: 'n',
     describe: 'Change library name in package.json'
   }
