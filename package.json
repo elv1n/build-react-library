@@ -1,12 +1,12 @@
 {
   "name": "build-react-library",
   "version": "0.0.3",
-  "description": "Easy build react library",
+  "description": "Build react library",
   "bin": {
-    "build-library": "./bin/build-library.js"
+    "build-react-library": "./bin/build-react-library.js"
   },
   "scripts": {
-    "start": "babel-node src/index.js",
+    "start": "babel ./src --out-dir dist -w",
     "build": "babel ./src --out-dir dist"
   },
   "files": [
@@ -42,6 +42,7 @@
     "@babel/node": "^7.2.2",
     "eslint-config-elv1n-react": "^0.0.10"
   },
+  "repository": "elv1n/build-react-library",
   "license": "MIT",
   "eslintConfig": {
     "extends": [
