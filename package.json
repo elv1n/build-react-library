@@ -1,6 +1,6 @@
 {
   "name": "build-react-library",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Build react library",
   "bin": {
     "build-react-library": "./bin/build-react-library.js"
