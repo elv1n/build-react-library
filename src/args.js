@@ -14,6 +14,11 @@ const { argv } = yargs.options({
   'lib-name': {
     alias: 'n',
     describe: 'Change library name in package.json'
+  },
+  watch: {
+    alias: 'w',
+    type: 'boolean',
+    describe: 'Add --watch argument to babel'
   }
 });
 

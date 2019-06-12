@@ -15,38 +15,48 @@
     "babel.library.js"
   ],
   "dependencies": {
-    "@babel/cli": "^7.2.0",
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-proposal-class-properties": "^7.2.1",
-    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/cli": "7.4.4",
+    "@babel/core": "7.4.5",
+    "@babel/plugin-proposal-class-properties": "7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "7.4.4",
     "@babel/plugin-transform-object-assign": "^7.2.0",
-    "@babel/plugin-transform-runtime": "^7.3.4",
-    "@babel/preset-env": "^7.2.0",
+    "@babel/plugin-transform-runtime": "7.4.4",
+    "@babel/preset-env": "7.4.5",
     "@babel/preset-react": "^7.0.0",
-    "babel-plugin-istanbul": "^5.0.0",
+    "babel-plugin-istanbul": "5.1.4",
     "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-optimize-clsx": "^2.2.0",
     "babel-plugin-react-remove-properties": "^0.3.0",
     "babel-plugin-transform-dev-warning": "^0.1.0",
     "babel-plugin-transform-react-constant-elements": "^6.23.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.21",
     "cross-env": "^5.2.0",
-    "fs-extra": "^7.0.1",
-    "glob": "^7.1.3",
-    "log-update": "^2.3.0",
+    "fs-extra": "8.0.1",
+    "glob": "7.1.4",
+    "log-update": "3.2.0",
     "node-emoji": "^1.10.0",
     "npm-run": "^5.0.1",
-    "p-map": "^2.0.0",
-    "yargs": "^13.2.1"
+    "p-map": "2.1.0",
+    "yargs": "13.2.4"
   },
   "devDependencies": {
-    "@babel/node": "^7.2.2",
-    "eslint-config-elv1n-react": "^0.0.10"
+    "@babel/node": "7.4.5",
+    "eslint-config-elv1n-react": "0.0.12"
   },
   "repository": "elv1n/build-react-library",
   "license": "MIT",
   "eslintConfig": {
     "extends": [
       "elv1n-react"
-    ]
+    ],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "paths": [
+            "src"
+          ]
+        }
+      }
+    }
   }
 }
