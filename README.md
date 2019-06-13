@@ -5,6 +5,10 @@
 
 **build-react-library based on [@material-ui](https://github.com/mui-org/material-ui) babel config**
 
+Additional plugins:
+
+- @babel/plugin-syntax-dynamic-import
+
 ### Get Started
 
 ```bash
@@ -19,3 +23,4 @@ yarn build-react-icons
 * `--output-dir, -o` - Directory to output generated components. [default: "build"]
 * `--src-dir, -s` - Directory containing the source SVG icons. [default: "src"]
 * `--lib-name, -n` - "Change library name in package.json".
+* `--watch, -w` - "babel --watch".
