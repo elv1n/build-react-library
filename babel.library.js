@@ -21,7 +21,6 @@ if (process.env.BABEL_ENV === 'es') {
 const productionPlugins = [
   'transform-react-constant-elements',
   'transform-dev-warning',
-  ['react-remove-properties', { properties: ['data-test'] }],
   [
     'transform-react-remove-prop-types',
     {
